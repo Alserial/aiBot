@@ -1,0 +1,140 @@
+[INFO][2024-01-15 15:57:42][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wx', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': ''}
+[INFO][2024-01-15 15:57:42][config.py:170] - [Config] User datas loaded.
+[ERROR][2024-01-15 15:57:42][app.py:52] - App startup failed!
+[ERROR][2024-01-15 15:57:42][app.py:53] - No module named 'requests'
+Traceback (most recent call last):
+  File "/Users/alserial/Documents/study/aiBot/app.py", line 45, in run
+    channel = channel_factory.create_channel(channel_name)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/alserial/Documents/study/aiBot/channel/channel_factory.py", line 13, in create_channel
+    from channel.wechat.wechat_channel import WechatChannel
+  File "/Users/alserial/Documents/study/aiBot/channel/wechat/wechat_channel.py", line 13, in <module>
+    import requests
+ModuleNotFoundError: No module named 'requests'
+[INFO][2024-01-15 15:58:01][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wx', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': ''}
+[INFO][2024-01-15 15:58:01][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-15 15:58:02][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[INFO][2024-01-15 15:58:02][plugin_manager.py:50] - Loading plugins config...
+[INFO][2024-01-15 15:58:02][plugin_manager.py:88] - Scaning plugins ...
+[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin linkai_v0.1.0 registered, path=./plugins/linkai
+[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[WARNING][2024-01-15 15:58:02][plugin_manager.py:113] - Failed to import plugin tool: No module named 'chatgpt_tool_hub'
+[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin GODCMD not found in pconfig, adding to pconfig...
+[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin KEYWORD not found in pconfig, adding to pconfig...
+[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin BANWORDS not found in pconfig, adding to pconfig...
+[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin LINKAI not found in pconfig, adding to pconfig...
+[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin ROLE not found in pconfig, adding to pconfig...
+[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin DUNGEON not found in pconfig, adding to pconfig...
+[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin BDUNIT not found in pconfig, adding to pconfig...
+[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin HELLO not found in pconfig, adding to pconfig...
+[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin FINISH not found in pconfig, adding to pconfig...
+[INFO][2024-01-15 15:58:02][godcmd.py:194] - [Godcmd] 因未设置口令，本次的临时口令为2381。
+[INFO][2024-01-15 15:58:02][godcmd.py:209] - [Godcmd] inited
+[INFO][2024-01-15 15:58:02][keyword.py:40] - [keyword] {}
+[INFO][2024-01-15 15:58:02][keyword.py:42] - [keyword] inited.
+[WARNING][2024-01-15 15:58:02][banwords.py:54] - [Banwords] init failed, ignore or see https://github.com/zhayujie/chatgpt-on-wechat/tree/master/plugins/banwords .
+[WARNING][2024-01-15 15:58:02][plugin_manager.py:148] - Failed to init BANWORDS, diabled. [Errno 2] No such file or directory: '/Users/alserial/Documents/study/aiBot/plugins/banwords/banwords.txt'
+[INFO][2024-01-15 15:58:02][linkai.py:34] - [LinkAI] inited
+[INFO][2024-01-15 15:58:02][role.py:69] - [Role] inited
+[INFO][2024-01-15 15:58:02][dungeon.py:56] - [Dungeon] inited
+[WARNING][2024-01-15 15:58:02][bdunit.py:42] - [BDunit] init failed, ignore 
+[WARNING][2024-01-15 15:58:02][plugin_manager.py:148] - Failed to init BDUNIT, diabled. config.json not found
+[INFO][2024-01-15 15:58:02][hello.py:23] - [Hello] inited
+[INFO][2024-01-15 15:58:02][finish.py:23] - [Finish] inited
+[INFO][2024-01-15 15:58:16][app.py:17] - signal 2 received, exiting...
+[INFO][2024-01-15 15:58:16][config.py:181] - [Config] User datas saved.
+[INFO][2024-01-15 16:46:05][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': ''}
+[INFO][2024-01-15 16:46:05][config.py:170] - [Config] User datas loaded.
+[ERROR][2024-01-15 16:46:05][app.py:52] - App startup failed!
+[ERROR][2024-01-15 16:46:05][app.py:53] - No module named 'wechatpy'
+Traceback (most recent call last):
+  File "/Users/alserial/Documents/study/aiBot/app.py", line 45, in run
+    channel = channel_factory.create_channel(channel_name)
+  File "/Users/alserial/Documents/study/aiBot/channel/channel_factory.py", line 33, in create_channel
+    from channel.wechatcom.wechatcomapp_channel import WechatComAppChannel
+  File "/Users/alserial/Documents/study/aiBot/channel/wechatcom/wechatcomapp_channel.py", line 8, in <module>
+    from wechatpy.enterprise import create_reply, parse_message
+ModuleNotFoundError: No module named 'wechatpy'
+[INFO][2024-01-15 16:49:35][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': ''}
+[INFO][2024-01-15 16:49:35][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-15 16:49:37][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[WARNING][2024-01-15 16:49:37][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[ERROR][2024-01-15 16:49:37][app.py:52] - App startup failed!
+[ERROR][2024-01-15 16:49:37][app.py:53] - No module named 'pydub'
+Traceback (most recent call last):
+  File "/Users/alserial/Documents/study/aiBot/app.py", line 45, in run
+    channel = channel_factory.create_channel(channel_name)
+  File "/Users/alserial/Documents/study/aiBot/channel/channel_factory.py", line 33, in create_channel
+    from channel.wechatcom.wechatcomapp_channel import WechatComAppChannel
+  File "/Users/alserial/Documents/study/aiBot/channel/wechatcom/wechatcomapp_channel.py", line 22, in <module>
+    from voice.audio_convert import any_to_amr, split_audio
+  File "/Users/alserial/Documents/study/aiBot/voice/audio_convert.py", line 11, in <module>
+    from pydub import AudioSegment
+ModuleNotFoundError: No module named 'pydub'
+[INFO][2024-01-15 16:49:51][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': ''}
+[INFO][2024-01-15 16:49:51][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-15 16:49:52][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[INFO][2024-01-15 16:49:52][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: None, secret: None, agent_id: None, token: None, aes_key: None
+[ERROR][2024-01-15 16:49:52][app.py:52] - App startup failed!
+[ERROR][2024-01-15 16:49:52][app.py:53] - unsupported operand type(s) for +: 'NoneType' and 'str'
+Traceback (most recent call last):
+  File "/Users/alserial/Documents/study/aiBot/app.py", line 45, in run
+    channel = channel_factory.create_channel(channel_name)
+  File "/Users/alserial/Documents/study/aiBot/channel/channel_factory.py", line 35, in create_channel
+    return WechatComAppChannel()
+  File "/Users/alserial/Documents/study/aiBot/common/singleton.py", line 6, in get_instance
+    instances[cls] = cls(*args, **kwargs)
+  File "/Users/alserial/Documents/study/aiBot/channel/wechatcom/wechatcomapp_channel.py", line 42, in __init__
+    self.crypto = WeChatCrypto(self.token, self.aes_key, self.corp_id)
+  File "/Users/alserial/anaconda3/envs/aiBot/lib/python3.8/site-packages/wechatpy/enterprise/crypto.py", line 19, in __init__
+    super(WeChatCrypto, self).__init__(token, encoding_aes_key, corp_id)
+  File "/Users/alserial/anaconda3/envs/aiBot/lib/python3.8/site-packages/wechatpy/crypto/__init__.py", line 45, in __init__
+    encoding_aes_key = to_binary(encoding_aes_key + '=')
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+[INFO][2024-01-15 17:25:58][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': ''}
+[INFO][2024-01-15 17:25:58][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-15 17:25:59][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[INFO][2024-01-15 17:25:59][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: None, secret: None, agent_id: None, token: None, aes_key: None
+[ERROR][2024-01-15 17:25:59][app.py:52] - App startup failed!
+[ERROR][2024-01-15 17:25:59][app.py:53] - unsupported operand type(s) for +: 'NoneType' and 'str'
+Traceback (most recent call last):
+  File "/Users/alserial/Documents/study/aiBot/app.py", line 45, in run
+    channel = channel_factory.create_channel(channel_name)
+  File "/Users/alserial/Documents/study/aiBot/channel/channel_factory.py", line 35, in create_channel
+    return WechatComAppChannel()
+  File "/Users/alserial/Documents/study/aiBot/common/singleton.py", line 6, in get_instance
+    instances[cls] = cls(*args, **kwargs)
+  File "/Users/alserial/Documents/study/aiBot/channel/wechatcom/wechatcomapp_channel.py", line 42, in __init__
+    self.crypto = WeChatCrypto(self.token, self.aes_key, self.corp_id)
+  File "/Users/alserial/anaconda3/envs/aiBot/lib/python3.8/site-packages/wechatpy/enterprise/crypto.py", line 19, in __init__
+    super(WeChatCrypto, self).__init__(token, encoding_aes_key, corp_id)
+  File "/Users/alserial/anaconda3/envs/aiBot/lib/python3.8/site-packages/wechatpy/crypto/__init__.py", line 45, in __init__
+    encoding_aes_key = to_binary(encoding_aes_key + '=')
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+[INFO][2024-01-15 17:31:12][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': ''}
+[INFO][2024-01-15 17:31:12][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-15 17:31:13][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[INFO][2024-01-15 17:31:13][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: None, secret: None, agent_id: None, token: None, aes_key: None
+[ERROR][2024-01-15 17:31:13][app.py:52] - App startup failed!
+[ERROR][2024-01-15 17:31:13][app.py:53] - unsupported operand type(s) for +: 'NoneType' and 'str'
+Traceback (most recent call last):
+  File "/Users/alserial/Documents/study/aiBot/app.py", line 45, in run
+    channel = channel_factory.create_channel(channel_name)
+  File "/Users/alserial/Documents/study/aiBot/channel/channel_factory.py", line 35, in create_channel
+    return WechatComAppChannel()
+  File "/Users/alserial/Documents/study/aiBot/common/singleton.py", line 6, in get_instance
+    instances[cls] = cls(*args, **kwargs)
+  File "/Users/alserial/Documents/study/aiBot/channel/wechatcom/wechatcomapp_channel.py", line 42, in __init__
+    self.crypto = WeChatCrypto(self.token, self.aes_key, self.corp_id)
+  File "/Users/alserial/anaconda3/envs/aiBot/lib/python3.8/site-packages/wechatpy/enterprise/crypto.py", line 19, in __init__
+    super(WeChatCrypto, self).__init__(token, encoding_aes_key, corp_id)
+  File "/Users/alserial/anaconda3/envs/aiBot/lib/python3.8/site-packages/wechatpy/crypto/__init__.py", line 45, in __init__
+    encoding_aes_key = to_binary(encoding_aes_key + '=')
+TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
