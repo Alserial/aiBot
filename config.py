@@ -103,13 +103,13 @@ available_setting = {
     "wechatmp_app_secret": "",  # 微信公众平台的appsecret
     "wechatmp_aes_key": "",  # 微信公众平台的EncodingAESKey，加密模式需要
     # wechatcom的通用配置
-    "wechatcom_corp_id": "ww084ddb762e0dfc9b",  # 企业微信公司的corpID
+    "wechatcom_corp_id": "",  # 企业微信公司的corpID
     # wechatcomapp的配置
-    "wechatcomapp_token": "oXguQeC4GW",  # 企业微信app的token
+    "wechatcomapp_token": "",  # 企业微信app的token
     "wechatcomapp_port": 9898,  # 企业微信app的服务端口,不需要端口转发
-    "wechatcomapp_secret": "OKgFB3LHdZ3JNvbZkbW6eDeUZr4PCMMqraeYk-nxmZM",  # 企业微信app的secret
-    "wechatcomapp_agent_id": "1000003",  # 企业微信app的agent_id
-    "wechatcomapp_aes_key": "QWsvuMBzloH9ELOdsO5fgMdMsvlyT6fkHlPHKa7Kuzc",  # 企业微信app的aes_key
+    "wechatcomapp_secret": "",  # 企业微信app的secret
+    "wechatcomapp_agent_id": "",  # 企业微信app的agent_id
+    "wechatcomapp_aes_key": "",  # 企业微信app的aes_key
     # chatgpt指令自定义触发词
     "clear_memory_commands": ["#清除记忆"],  # 重置会话指令，必须以#开头
     # channel配置
@@ -218,7 +218,7 @@ def load_config():
     if config.get("debug", False):
         logger.setLevel(logging.DEBUG)
         logger.debug("[INIT] set log level to DEBUG")
-
+    print(config.get("channel_type"))
     logger.info("[INIT] load config: {}".format(config))
 
     config.load_user_datas()

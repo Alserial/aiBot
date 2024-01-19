@@ -1,7 +1,7 @@
 {
   "open_ai_api_key": "",
   "model": "aigo",
-  "channel_type": "wechatcom_app",
+  "channel_type": "wx",
   "proxy": "",
   "hot_reload": false,
   "single_chat_prefix": [
@@ -33,5 +33,11 @@
   "subscribe_msg": "感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。",
   "use_linkai": false,
   "linkai_api_key": "",
-  "linkai_app_code": ""
+  "linkai_app_code": "",
+  "wechatcom_corp_id": "ww084ddb762e0dfc9b", 
+  "wechatcomapp_token": "3BUTPKq1vpFD4eRR7nF88sQw",  
+  "wechatcomapp_port": 9898,  
+  "wechatcomapp_secret": "KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ",  
+  "wechatcomapp_agent_id": "1000007", 
+  "wechatcomapp_aes_key": "wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH"
 }

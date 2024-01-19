@@ -1,140 +1,432 @@
-[INFO][2024-01-15 15:57:42][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wx', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': ''}
-[INFO][2024-01-15 15:57:42][config.py:170] - [Config] User datas loaded.
-[ERROR][2024-01-15 15:57:42][app.py:52] - App startup failed!
-[ERROR][2024-01-15 15:57:42][app.py:53] - No module named 'requests'
+[INFO][2024-01-17 16:34:59][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wx', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': ''}
+[INFO][2024-01-17 16:34:59][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-17 16:34:59][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[INFO][2024-01-17 16:34:59][plugin_manager.py:50] - Loading plugins config...
+[INFO][2024-01-17 16:34:59][plugin_manager.py:88] - Scaning plugins ...
+[INFO][2024-01-17 16:34:59][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2024-01-17 16:34:59][plugin_manager.py:41] - Plugin linkai_v0.1.0 registered, path=./plugins/linkai
+[INFO][2024-01-17 16:34:59][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2024-01-17 16:34:59][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2024-01-17 16:34:59][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2024-01-17 16:34:59][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2024-01-17 16:34:59][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2024-01-17 16:34:59][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2024-01-17 16:34:59][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[WARNING][2024-01-17 16:34:59][plugin_manager.py:113] - Failed to import plugin tool: No module named 'chatgpt_tool_hub'
+[INFO][2024-01-17 16:34:59][plugin_manager.py:123] - Plugin GODCMD not found in pconfig, adding to pconfig...
+[INFO][2024-01-17 16:34:59][plugin_manager.py:123] - Plugin KEYWORD not found in pconfig, adding to pconfig...
+[INFO][2024-01-17 16:34:59][plugin_manager.py:123] - Plugin BANWORDS not found in pconfig, adding to pconfig...
+[INFO][2024-01-17 16:34:59][plugin_manager.py:123] - Plugin LINKAI not found in pconfig, adding to pconfig...
+[INFO][2024-01-17 16:34:59][plugin_manager.py:123] - Plugin ROLE not found in pconfig, adding to pconfig...
+[INFO][2024-01-17 16:34:59][plugin_manager.py:123] - Plugin DUNGEON not found in pconfig, adding to pconfig...
+[INFO][2024-01-17 16:34:59][plugin_manager.py:123] - Plugin BDUNIT not found in pconfig, adding to pconfig...
+[INFO][2024-01-17 16:34:59][plugin_manager.py:123] - Plugin HELLO not found in pconfig, adding to pconfig...
+[INFO][2024-01-17 16:34:59][plugin_manager.py:123] - Plugin FINISH not found in pconfig, adding to pconfig...
+[INFO][2024-01-17 16:34:59][godcmd.py:194] - [Godcmd] 因未设置口令，本次的临时口令为7953。
+[INFO][2024-01-17 16:34:59][godcmd.py:209] - [Godcmd] inited
+[INFO][2024-01-17 16:34:59][keyword.py:40] - [keyword] {}
+[INFO][2024-01-17 16:34:59][keyword.py:42] - [keyword] inited.
+[WARNING][2024-01-17 16:34:59][banwords.py:54] - [Banwords] init failed, ignore or see https://github.com/zhayujie/chatgpt-on-wechat/tree/master/plugins/banwords .
+[WARNING][2024-01-17 16:34:59][plugin_manager.py:148] - Failed to init BANWORDS, diabled. [Errno 2] No such file or directory: '/Users/alserial/Downloads/aigo_chatbot-master-e947e8eab99de8fae922f28cdd1172c17a7a7354 2/plugins/banwords/banwords.txt'
+[INFO][2024-01-17 16:34:59][linkai.py:34] - [LinkAI] inited
+[INFO][2024-01-17 16:34:59][role.py:69] - [Role] inited
+[INFO][2024-01-17 16:34:59][dungeon.py:56] - [Dungeon] inited
+[WARNING][2024-01-17 16:34:59][bdunit.py:42] - [BDunit] init failed, ignore 
+[WARNING][2024-01-17 16:34:59][plugin_manager.py:148] - Failed to init BDUNIT, diabled. config.json not found
+[INFO][2024-01-17 16:34:59][hello.py:23] - [Hello] inited
+[INFO][2024-01-17 16:34:59][finish.py:23] - [Finish] inited
+[INFO][2024-01-17 16:35:06][app.py:17] - signal 2 received, exiting...
+[INFO][2024-01-17 16:35:06][config.py:181] - [Config] User datas saved.
+[INFO][2024-01-19 11:33:24][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'wechatcom_corp_id': 'ww084ddb762e0dfc9b', 'wechatcomapp_token': '3BUTPKq1vpFD4eRR7nF88sQw', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ', 'wechatcomapp_agent_id': '1000007', 'wechatcomapp_aes_key': 'wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH'}
+[INFO][2024-01-19 11:33:24][config.py:170] - [Config] User datas loaded.
+[ERROR][2024-01-19 11:33:24][app.py:52] - App startup failed!
+[ERROR][2024-01-19 11:33:24][app.py:53] - urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'OpenSSL 1.0.2k-fips  26 Jan 2017'. See: https://github.com/urllib3/urllib3/issues/2168
 Traceback (most recent call last):
-  File "/Users/alserial/Documents/study/aiBot/app.py", line 45, in run
+  File "app.py", line 45, in run
     channel = channel_factory.create_channel(channel_name)
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/Users/alserial/Documents/study/aiBot/channel/channel_factory.py", line 13, in create_channel
-    from channel.wechat.wechat_channel import WechatChannel
-  File "/Users/alserial/Documents/study/aiBot/channel/wechat/wechat_channel.py", line 13, in <module>
+  File "/root/aigo_chatbot-master-e947e8eab99de8fae922f28cdd1172c17a7a7354 2/channel/channel_factory.py", line 33, in create_channel
+    from channel.wechatcom.wechatcomapp_channel import WechatComAppChannel
+  File "/root/aigo_chatbot-master-e947e8eab99de8fae922f28cdd1172c17a7a7354 2/channel/wechatcom/wechatcomapp_channel.py", line 6, in <module>
     import requests
-ModuleNotFoundError: No module named 'requests'
-[INFO][2024-01-15 15:58:01][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wx', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': ''}
-[INFO][2024-01-15 15:58:01][config.py:170] - [Config] User datas loaded.
-[WARNING][2024-01-15 15:58:02][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
-[INFO][2024-01-15 15:58:02][plugin_manager.py:50] - Loading plugins config...
-[INFO][2024-01-15 15:58:02][plugin_manager.py:88] - Scaning plugins ...
-[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
-[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin linkai_v0.1.0 registered, path=./plugins/linkai
-[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
-[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
-[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
-[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
-[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
-[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
-[INFO][2024-01-15 15:58:02][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
-[WARNING][2024-01-15 15:58:02][plugin_manager.py:113] - Failed to import plugin tool: No module named 'chatgpt_tool_hub'
-[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin GODCMD not found in pconfig, adding to pconfig...
-[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin KEYWORD not found in pconfig, adding to pconfig...
-[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin BANWORDS not found in pconfig, adding to pconfig...
-[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin LINKAI not found in pconfig, adding to pconfig...
-[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin ROLE not found in pconfig, adding to pconfig...
-[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin DUNGEON not found in pconfig, adding to pconfig...
-[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin BDUNIT not found in pconfig, adding to pconfig...
-[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin HELLO not found in pconfig, adding to pconfig...
-[INFO][2024-01-15 15:58:02][plugin_manager.py:123] - Plugin FINISH not found in pconfig, adding to pconfig...
-[INFO][2024-01-15 15:58:02][godcmd.py:194] - [Godcmd] 因未设置口令，本次的临时口令为2381。
-[INFO][2024-01-15 15:58:02][godcmd.py:209] - [Godcmd] inited
-[INFO][2024-01-15 15:58:02][keyword.py:40] - [keyword] {}
-[INFO][2024-01-15 15:58:02][keyword.py:42] - [keyword] inited.
-[WARNING][2024-01-15 15:58:02][banwords.py:54] - [Banwords] init failed, ignore or see https://github.com/zhayujie/chatgpt-on-wechat/tree/master/plugins/banwords .
-[WARNING][2024-01-15 15:58:02][plugin_manager.py:148] - Failed to init BANWORDS, diabled. [Errno 2] No such file or directory: '/Users/alserial/Documents/study/aiBot/plugins/banwords/banwords.txt'
-[INFO][2024-01-15 15:58:02][linkai.py:34] - [LinkAI] inited
-[INFO][2024-01-15 15:58:02][role.py:69] - [Role] inited
-[INFO][2024-01-15 15:58:02][dungeon.py:56] - [Dungeon] inited
-[WARNING][2024-01-15 15:58:02][bdunit.py:42] - [BDunit] init failed, ignore 
-[WARNING][2024-01-15 15:58:02][plugin_manager.py:148] - Failed to init BDUNIT, diabled. config.json not found
-[INFO][2024-01-15 15:58:02][hello.py:23] - [Hello] inited
-[INFO][2024-01-15 15:58:02][finish.py:23] - [Finish] inited
-[INFO][2024-01-15 15:58:16][app.py:17] - signal 2 received, exiting...
-[INFO][2024-01-15 15:58:16][config.py:181] - [Config] User datas saved.
-[INFO][2024-01-15 16:46:05][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': ''}
-[INFO][2024-01-15 16:46:05][config.py:170] - [Config] User datas loaded.
-[ERROR][2024-01-15 16:46:05][app.py:52] - App startup failed!
-[ERROR][2024-01-15 16:46:05][app.py:53] - No module named 'wechatpy'
+  File "/root/dockertest/lib64/python3.8/site-packages/requests/__init__.py", line 43, in <module>
+    import urllib3
+  File "/root/dockertest/lib64/python3.8/site-packages/urllib3/__init__.py", line 41, in <module>
+    raise ImportError(
+ImportError: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'OpenSSL 1.0.2k-fips  26 Jan 2017'. See: https://github.com/urllib3/urllib3/issues/2168
+[INFO][2024-01-19 11:34:41][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'wechatcom_corp_id': 'ww084ddb762e0dfc9b', 'wechatcomapp_token': '3BUTPKq1vpFD4eRR7nF88sQw', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ', 'wechatcomapp_agent_id': '1000007', 'wechatcomapp_aes_key': 'wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH'}
+[INFO][2024-01-19 11:34:41][config.py:170] - [Config] User datas loaded.
+[ERROR][2024-01-19 11:34:42][app.py:52] - App startup failed!
+[ERROR][2024-01-19 11:34:42][app.py:53] - You must install either cryptography or pycryptodome!
 Traceback (most recent call last):
-  File "/Users/alserial/Documents/study/aiBot/app.py", line 45, in run
+  File "/root/dockertest/lib64/python3.8/site-packages/wechatpy/crypto/base.py", line 10, in <module>
+    from wechatpy.crypto.cryptography import WeChatCipher, AesEcbCipher
+  File "/root/dockertest/lib64/python3.8/site-packages/wechatpy/crypto/cryptography.py", line 3, in <module>
+    from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
+ModuleNotFoundError: No module named 'cryptography'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/dockertest/lib64/python3.8/site-packages/wechatpy/crypto/base.py", line 13, in <module>
+    from wechatpy.crypto.pycrypto import WeChatCipher, AesEcbCipher
+  File "/root/dockertest/lib64/python3.8/site-packages/wechatpy/crypto/pycrypto.py", line 3, in <module>
+    from Crypto.Cipher import AES
+ModuleNotFoundError: No module named 'Crypto'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "app.py", line 45, in run
     channel = channel_factory.create_channel(channel_name)
-  File "/Users/alserial/Documents/study/aiBot/channel/channel_factory.py", line 33, in create_channel
+  File "/root/aigo_chatbot-master-e947e8eab99de8fae922f28cdd1172c17a7a7354 2/channel/channel_factory.py", line 33, in create_channel
     from channel.wechatcom.wechatcomapp_channel import WechatComAppChannel
-  File "/Users/alserial/Documents/study/aiBot/channel/wechatcom/wechatcomapp_channel.py", line 8, in <module>
+  File "/root/aigo_chatbot-master-e947e8eab99de8fae922f28cdd1172c17a7a7354 2/channel/wechatcom/wechatcomapp_channel.py", line 8, in <module>
     from wechatpy.enterprise import create_reply, parse_message
-ModuleNotFoundError: No module named 'wechatpy'
-[INFO][2024-01-15 16:49:35][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': ''}
-[INFO][2024-01-15 16:49:35][config.py:170] - [Config] User datas loaded.
-[WARNING][2024-01-15 16:49:37][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
-[WARNING][2024-01-15 16:49:37][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
-[ERROR][2024-01-15 16:49:37][app.py:52] - App startup failed!
-[ERROR][2024-01-15 16:49:37][app.py:53] - No module named 'pydub'
+  File "/root/dockertest/lib64/python3.8/site-packages/wechatpy/__init__.py", line 6, in <module>
+    from wechatpy.component import ComponentOAuth, WeChatComponent  # NOQA
+  File "/root/dockertest/lib64/python3.8/site-packages/wechatpy/component.py", line 24, in <module>
+    from wechatpy.crypto import WeChatCrypto
+  File "/root/dockertest/lib64/python3.8/site-packages/wechatpy/crypto/__init__.py", line 23, in <module>
+    from wechatpy.crypto.base import BasePrpCrypto, WeChatCipher, BaseRefundCrypto
+  File "/root/dockertest/lib64/python3.8/site-packages/wechatpy/crypto/base.py", line 15, in <module>
+    raise Exception('You must install either cryptography or pycryptodome!')
+Exception: You must install either cryptography or pycryptodome!
+[INFO][2024-01-19 11:35:32][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'wechatcom_corp_id': 'ww084ddb762e0dfc9b', 'wechatcomapp_token': '3BUTPKq1vpFD4eRR7nF88sQw', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ', 'wechatcomapp_agent_id': '1000007', 'wechatcomapp_aes_key': 'wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH'}
+[INFO][2024-01-19 11:35:32][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-19 11:35:32][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[WARNING][2024-01-19 11:35:32][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[ERROR][2024-01-19 11:35:32][app.py:52] - App startup failed!
+[ERROR][2024-01-19 11:35:32][app.py:53] - No module named 'pydub'
 Traceback (most recent call last):
-  File "/Users/alserial/Documents/study/aiBot/app.py", line 45, in run
+  File "app.py", line 45, in run
     channel = channel_factory.create_channel(channel_name)
-  File "/Users/alserial/Documents/study/aiBot/channel/channel_factory.py", line 33, in create_channel
+  File "/root/aigo_chatbot-master-e947e8eab99de8fae922f28cdd1172c17a7a7354 2/channel/channel_factory.py", line 33, in create_channel
     from channel.wechatcom.wechatcomapp_channel import WechatComAppChannel
-  File "/Users/alserial/Documents/study/aiBot/channel/wechatcom/wechatcomapp_channel.py", line 22, in <module>
+  File "/root/aigo_chatbot-master-e947e8eab99de8fae922f28cdd1172c17a7a7354 2/channel/wechatcom/wechatcomapp_channel.py", line 22, in <module>
     from voice.audio_convert import any_to_amr, split_audio
-  File "/Users/alserial/Documents/study/aiBot/voice/audio_convert.py", line 11, in <module>
+  File "/root/aigo_chatbot-master-e947e8eab99de8fae922f28cdd1172c17a7a7354 2/voice/audio_convert.py", line 11, in <module>
     from pydub import AudioSegment
 ModuleNotFoundError: No module named 'pydub'
-[INFO][2024-01-15 16:49:51][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': ''}
-[INFO][2024-01-15 16:49:51][config.py:170] - [Config] User datas loaded.
-[WARNING][2024-01-15 16:49:52][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
-[INFO][2024-01-15 16:49:52][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: None, secret: None, agent_id: None, token: None, aes_key: None
-[ERROR][2024-01-15 16:49:52][app.py:52] - App startup failed!
-[ERROR][2024-01-15 16:49:52][app.py:53] - unsupported operand type(s) for +: 'NoneType' and 'str'
+[INFO][2024-01-19 11:35:43][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'wechatcom_corp_id': 'ww084ddb762e0dfc9b', 'wechatcomapp_token': '3BUTPKq1vpFD4eRR7nF88sQw', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ', 'wechatcomapp_agent_id': '1000007', 'wechatcomapp_aes_key': 'wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH'}
+[INFO][2024-01-19 11:35:43][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-19 11:35:44][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[WARNING][2024-01-19 11:35:44][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[ERROR][2024-01-19 11:35:44][app.py:52] - App startup failed!
+[ERROR][2024-01-19 11:35:44][app.py:53] - No module named 'pydub'
 Traceback (most recent call last):
-  File "/Users/alserial/Documents/study/aiBot/app.py", line 45, in run
+  File "app.py", line 45, in run
     channel = channel_factory.create_channel(channel_name)
-  File "/Users/alserial/Documents/study/aiBot/channel/channel_factory.py", line 35, in create_channel
-    return WechatComAppChannel()
-  File "/Users/alserial/Documents/study/aiBot/common/singleton.py", line 6, in get_instance
-    instances[cls] = cls(*args, **kwargs)
-  File "/Users/alserial/Documents/study/aiBot/channel/wechatcom/wechatcomapp_channel.py", line 42, in __init__
-    self.crypto = WeChatCrypto(self.token, self.aes_key, self.corp_id)
-  File "/Users/alserial/anaconda3/envs/aiBot/lib/python3.8/site-packages/wechatpy/enterprise/crypto.py", line 19, in __init__
-    super(WeChatCrypto, self).__init__(token, encoding_aes_key, corp_id)
-  File "/Users/alserial/anaconda3/envs/aiBot/lib/python3.8/site-packages/wechatpy/crypto/__init__.py", line 45, in __init__
-    encoding_aes_key = to_binary(encoding_aes_key + '=')
-TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
-[INFO][2024-01-15 17:25:58][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': ''}
-[INFO][2024-01-15 17:25:58][config.py:170] - [Config] User datas loaded.
-[WARNING][2024-01-15 17:25:59][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
-[INFO][2024-01-15 17:25:59][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: None, secret: None, agent_id: None, token: None, aes_key: None
-[ERROR][2024-01-15 17:25:59][app.py:52] - App startup failed!
-[ERROR][2024-01-15 17:25:59][app.py:53] - unsupported operand type(s) for +: 'NoneType' and 'str'
+  File "/root/aigo_chatbot-master-e947e8eab99de8fae922f28cdd1172c17a7a7354 2/channel/channel_factory.py", line 33, in create_channel
+    from channel.wechatcom.wechatcomapp_channel import WechatComAppChannel
+  File "/root/aigo_chatbot-master-e947e8eab99de8fae922f28cdd1172c17a7a7354 2/channel/wechatcom/wechatcomapp_channel.py", line 22, in <module>
+    from voice.audio_convert import any_to_amr, split_audio
+  File "/root/aigo_chatbot-master-e947e8eab99de8fae922f28cdd1172c17a7a7354 2/voice/audio_convert.py", line 11, in <module>
+    from pydub import AudioSegment
+ModuleNotFoundError: No module named 'pydub'
+[INFO][2024-01-19 11:35:52][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'wechatcom_corp_id': 'ww084ddb762e0dfc9b', 'wechatcomapp_token': '3BUTPKq1vpFD4eRR7nF88sQw', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ', 'wechatcomapp_agent_id': '1000007', 'wechatcomapp_aes_key': 'wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH'}
+[INFO][2024-01-19 11:35:52][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-19 11:35:52][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[INFO][2024-01-19 11:35:52][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: ww084ddb762e0dfc9b, secret: KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ, agent_id: 1000007, token: 3BUTPKq1vpFD4eRR7nF88sQw, aes_key: wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH
+[INFO][2024-01-19 11:35:52][plugin_manager.py:50] - Loading plugins config...
+[INFO][2024-01-19 11:35:52][plugin_manager.py:88] - Scaning plugins ...
+[WARNING][2024-01-19 11:35:52][plugin_manager.py:113] - Failed to import plugin tool: No module named 'chatgpt_tool_hub'
+[INFO][2024-01-19 11:35:52][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2024-01-19 11:35:52][plugin_manager.py:41] - Plugin linkai_v0.1.0 registered, path=./plugins/linkai
+[INFO][2024-01-19 11:35:52][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2024-01-19 11:35:52][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2024-01-19 11:35:52][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2024-01-19 11:35:52][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2024-01-19 11:35:52][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2024-01-19 11:35:52][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2024-01-19 11:35:52][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2024-01-19 11:35:52][godcmd.py:194] - [Godcmd] 因未设置口令，本次的临时口令为0857。
+[INFO][2024-01-19 11:35:52][godcmd.py:209] - [Godcmd] inited
+[INFO][2024-01-19 11:35:52][keyword.py:40] - [keyword] {}
+[INFO][2024-01-19 11:35:52][keyword.py:42] - [keyword] inited.
+[INFO][2024-01-19 11:35:52][linkai.py:34] - [LinkAI] inited
+[INFO][2024-01-19 11:35:52][role.py:69] - [Role] inited
+[INFO][2024-01-19 11:35:52][dungeon.py:56] - [Dungeon] inited
+[INFO][2024-01-19 11:35:52][hello.py:23] - [Hello] inited
+[INFO][2024-01-19 11:35:52][finish.py:23] - [Finish] inited
+[INFO][2024-01-19 11:35:56][app.py:17] - signal 2 received, exiting...
+[INFO][2024-01-19 11:35:56][config.py:181] - [Config] User datas saved.
+[INFO][2024-01-19 11:37:07][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'wechatcom_corp_id': 'ww084ddb762e0dfc9b', 'wechatcomapp_token': '3BUTPKq1vpFD4eRR7nF88sQw', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ', 'wechatcomapp_agent_id': '1000007', 'wechatcomapp_aes_key': 'wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH'}
+[INFO][2024-01-19 11:37:07][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-19 11:37:07][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[INFO][2024-01-19 11:37:07][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: ww084ddb762e0dfc9b, secret: KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ, agent_id: 1000007, token: 3BUTPKq1vpFD4eRR7nF88sQw, aes_key: wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH
+[INFO][2024-01-19 11:37:07][plugin_manager.py:50] - Loading plugins config...
+[INFO][2024-01-19 11:37:07][plugin_manager.py:88] - Scaning plugins ...
+[WARNING][2024-01-19 11:37:07][plugin_manager.py:113] - Failed to import plugin tool: No module named 'chatgpt_tool_hub'
+[INFO][2024-01-19 11:37:07][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2024-01-19 11:37:07][plugin_manager.py:41] - Plugin linkai_v0.1.0 registered, path=./plugins/linkai
+[INFO][2024-01-19 11:37:07][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2024-01-19 11:37:07][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2024-01-19 11:37:07][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2024-01-19 11:37:07][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2024-01-19 11:37:07][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2024-01-19 11:37:07][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2024-01-19 11:37:07][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2024-01-19 11:37:07][godcmd.py:194] - [Godcmd] 因未设置口令，本次的临时口令为7618。
+[INFO][2024-01-19 11:37:07][godcmd.py:209] - [Godcmd] inited
+[INFO][2024-01-19 11:37:07][keyword.py:40] - [keyword] {}
+[INFO][2024-01-19 11:37:07][keyword.py:42] - [keyword] inited.
+[INFO][2024-01-19 11:37:07][linkai.py:34] - [LinkAI] inited
+[INFO][2024-01-19 11:37:07][role.py:69] - [Role] inited
+[INFO][2024-01-19 11:37:07][dungeon.py:56] - [Dungeon] inited
+[INFO][2024-01-19 11:37:07][hello.py:23] - [Hello] inited
+[INFO][2024-01-19 11:37:07][finish.py:23] - [Finish] inited
+[INFO][2024-01-19 11:37:20][app.py:17] - signal 2 received, exiting...
+[INFO][2024-01-19 11:37:20][config.py:181] - [Config] User datas saved.
+[INFO][2024-01-19 11:37:45][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'wechatcom_corp_id': 'ww084ddb762e0dfc9b', 'wechatcomapp_token': '3BUTPKq1vpFD4eRR7nF88sQw', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ', 'wechatcomapp_agent_id': '1000007', 'wechatcomapp_aes_key': 'wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH'}
+[INFO][2024-01-19 11:37:45][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-19 11:37:46][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[INFO][2024-01-19 11:37:46][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: ww084ddb762e0dfc9b, secret: KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ, agent_id: 1000007, token: 3BUTPKq1vpFD4eRR7nF88sQw, aes_key: wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH
+[INFO][2024-01-19 11:37:46][plugin_manager.py:50] - Loading plugins config...
+[INFO][2024-01-19 11:37:46][plugin_manager.py:88] - Scaning plugins ...
+[WARNING][2024-01-19 11:37:46][plugin_manager.py:113] - Failed to import plugin tool: No module named 'chatgpt_tool_hub'
+[INFO][2024-01-19 11:37:46][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2024-01-19 11:37:46][plugin_manager.py:41] - Plugin linkai_v0.1.0 registered, path=./plugins/linkai
+[INFO][2024-01-19 11:37:46][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2024-01-19 11:37:46][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2024-01-19 11:37:46][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2024-01-19 11:37:46][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2024-01-19 11:37:46][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2024-01-19 11:37:46][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2024-01-19 11:37:46][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2024-01-19 11:37:46][godcmd.py:194] - [Godcmd] 因未设置口令，本次的临时口令为2976。
+[INFO][2024-01-19 11:37:46][godcmd.py:209] - [Godcmd] inited
+[INFO][2024-01-19 11:37:46][keyword.py:40] - [keyword] {}
+[INFO][2024-01-19 11:37:46][keyword.py:42] - [keyword] inited.
+[INFO][2024-01-19 11:37:46][linkai.py:34] - [LinkAI] inited
+[INFO][2024-01-19 11:37:46][role.py:69] - [Role] inited
+[INFO][2024-01-19 11:37:46][dungeon.py:56] - [Dungeon] inited
+[INFO][2024-01-19 11:37:46][hello.py:23] - [Hello] inited
+[INFO][2024-01-19 11:37:46][finish.py:23] - [Finish] inited
+[INFO][2024-01-19 11:37:47][app.py:17] - signal 2 received, exiting...
+[INFO][2024-01-19 11:37:47][config.py:181] - [Config] User datas saved.
+[INFO][2024-01-19 11:39:56][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'wechatcom_corp_id': 'ww084ddb762e0dfc9b', 'wechatcomapp_token': '3BUTPKq1vpFD4eRR7nF88sQw', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ', 'wechatcomapp_agent_id': '1000007', 'wechatcomapp_aes_key': 'wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH'}
+[INFO][2024-01-19 11:39:56][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-19 11:39:56][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[INFO][2024-01-19 11:39:56][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: ww084ddb762e0dfc9b, secret: KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ, agent_id: 1000007, token: 3BUTPKq1vpFD4eRR7nF88sQw, aes_key: wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH
+[INFO][2024-01-19 11:39:56][plugin_manager.py:50] - Loading plugins config...
+[INFO][2024-01-19 11:39:56][plugin_manager.py:88] - Scaning plugins ...
+[WARNING][2024-01-19 11:39:56][plugin_manager.py:113] - Failed to import plugin tool: No module named 'chatgpt_tool_hub'
+[INFO][2024-01-19 11:39:56][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2024-01-19 11:39:56][plugin_manager.py:41] - Plugin linkai_v0.1.0 registered, path=./plugins/linkai
+[INFO][2024-01-19 11:39:56][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2024-01-19 11:39:56][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2024-01-19 11:39:56][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2024-01-19 11:39:56][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2024-01-19 11:39:56][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2024-01-19 11:39:56][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2024-01-19 11:39:56][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2024-01-19 11:39:56][godcmd.py:194] - [Godcmd] 因未设置口令，本次的临时口令为9710。
+[INFO][2024-01-19 11:39:56][godcmd.py:209] - [Godcmd] inited
+[INFO][2024-01-19 11:39:56][keyword.py:40] - [keyword] {}
+[INFO][2024-01-19 11:39:56][keyword.py:42] - [keyword] inited.
+[INFO][2024-01-19 11:39:56][linkai.py:34] - [LinkAI] inited
+[INFO][2024-01-19 11:39:56][role.py:69] - [Role] inited
+[INFO][2024-01-19 11:39:56][dungeon.py:56] - [Dungeon] inited
+[INFO][2024-01-19 11:39:56][hello.py:23] - [Hello] inited
+[INFO][2024-01-19 11:39:56][finish.py:23] - [Finish] inited
+[INFO][2024-01-19 11:40:04][app.py:17] - signal 2 received, exiting...
+[INFO][2024-01-19 11:40:04][config.py:181] - [Config] User datas saved.
+[INFO][2024-01-19 11:46:12][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'wechatcom_corp_id': 'ww084ddb762e0dfc9b', 'wechatcomapp_token': '3BUTPKq1vpFD4eRR7nF88sQw', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ', 'wechatcomapp_agent_id': '1000007', 'wechatcomapp_aes_key': 'wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH'}
+[INFO][2024-01-19 11:46:12][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-19 11:46:13][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[INFO][2024-01-19 11:46:13][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: ww084ddb762e0dfc9b, secret: KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ, agent_id: 1000007, token: 3BUTPKq1vpFD4eRR7nF88sQw, aes_key: wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH
+[INFO][2024-01-19 11:46:13][plugin_manager.py:50] - Loading plugins config...
+[INFO][2024-01-19 11:46:13][plugin_manager.py:88] - Scaning plugins ...
+[WARNING][2024-01-19 11:46:13][plugin_manager.py:113] - Failed to import plugin tool: No module named 'chatgpt_tool_hub'
+[INFO][2024-01-19 11:46:13][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2024-01-19 11:46:13][plugin_manager.py:41] - Plugin linkai_v0.1.0 registered, path=./plugins/linkai
+[INFO][2024-01-19 11:46:13][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2024-01-19 11:46:13][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2024-01-19 11:46:13][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2024-01-19 11:46:13][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2024-01-19 11:46:13][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2024-01-19 11:46:13][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2024-01-19 11:46:13][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2024-01-19 11:46:13][godcmd.py:194] - [Godcmd] 因未设置口令，本次的临时口令为0382。
+[INFO][2024-01-19 11:46:13][godcmd.py:209] - [Godcmd] inited
+[INFO][2024-01-19 11:46:13][keyword.py:40] - [keyword] {}
+[INFO][2024-01-19 11:46:13][keyword.py:42] - [keyword] inited.
+[INFO][2024-01-19 11:46:13][linkai.py:34] - [LinkAI] inited
+[INFO][2024-01-19 11:46:13][role.py:69] - [Role] inited
+[INFO][2024-01-19 11:46:13][dungeon.py:56] - [Dungeon] inited
+[INFO][2024-01-19 11:46:13][hello.py:23] - [Hello] inited
+[INFO][2024-01-19 11:46:13][finish.py:23] - [Finish] inited
+[INFO][2024-01-19 11:46:19][app.py:17] - signal 2 received, exiting...
+[INFO][2024-01-19 11:46:19][config.py:181] - [Config] User datas saved.
+[INFO][2024-01-19 11:47:05][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'wechatcom_corp_id': 'ww084ddb762e0dfc9b', 'wechatcomapp_token': '3BUTPKq1vpFD4eRR7nF88sQw', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ', 'wechatcomapp_agent_id': '1000007', 'wechatcomapp_aes_key': 'wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH'}
+[INFO][2024-01-19 11:47:05][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-19 11:47:05][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[INFO][2024-01-19 11:47:05][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: ww084ddb762e0dfc9b, secret: KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ, agent_id: 1000007, token: 3BUTPKq1vpFD4eRR7nF88sQw, aes_key: wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH
+[INFO][2024-01-19 11:47:05][plugin_manager.py:50] - Loading plugins config...
+[INFO][2024-01-19 11:47:05][plugin_manager.py:88] - Scaning plugins ...
+[WARNING][2024-01-19 11:47:05][plugin_manager.py:113] - Failed to import plugin tool: No module named 'chatgpt_tool_hub'
+[INFO][2024-01-19 11:47:05][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2024-01-19 11:47:05][plugin_manager.py:41] - Plugin linkai_v0.1.0 registered, path=./plugins/linkai
+[INFO][2024-01-19 11:47:05][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2024-01-19 11:47:05][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2024-01-19 11:47:05][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2024-01-19 11:47:05][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2024-01-19 11:47:05][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2024-01-19 11:47:05][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2024-01-19 11:47:05][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2024-01-19 11:47:05][godcmd.py:194] - [Godcmd] 因未设置口令，本次的临时口令为5498。
+[INFO][2024-01-19 11:47:05][godcmd.py:209] - [Godcmd] inited
+[INFO][2024-01-19 11:47:05][keyword.py:40] - [keyword] {}
+[INFO][2024-01-19 11:47:05][keyword.py:42] - [keyword] inited.
+[INFO][2024-01-19 11:47:05][linkai.py:34] - [LinkAI] inited
+[INFO][2024-01-19 11:47:05][role.py:69] - [Role] inited
+[INFO][2024-01-19 11:47:05][dungeon.py:56] - [Dungeon] inited
+[INFO][2024-01-19 11:47:05][hello.py:23] - [Hello] inited
+[INFO][2024-01-19 11:47:05][finish.py:23] - [Finish] inited
+[INFO][2024-01-19 11:48:08][app.py:17] - signal 2 received, exiting...
+[INFO][2024-01-19 11:48:08][config.py:181] - [Config] User datas saved.
+[INFO][2024-01-19 11:48:08][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'wechatcom_corp_id': 'ww084ddb762e0dfc9b', 'wechatcomapp_token': '3BUTPKq1vpFD4eRR7nF88sQw', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ', 'wechatcomapp_agent_id': '1000007', 'wechatcomapp_aes_key': 'wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH'}
+[INFO][2024-01-19 11:48:08][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-19 11:48:09][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[INFO][2024-01-19 11:48:09][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: ww084ddb762e0dfc9b, secret: KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ, agent_id: 1000007, token: 3BUTPKq1vpFD4eRR7nF88sQw, aes_key: wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH
+[INFO][2024-01-19 11:48:09][plugin_manager.py:50] - Loading plugins config...
+[INFO][2024-01-19 11:48:09][plugin_manager.py:88] - Scaning plugins ...
+[WARNING][2024-01-19 11:48:09][plugin_manager.py:113] - Failed to import plugin tool: No module named 'chatgpt_tool_hub'
+[INFO][2024-01-19 11:48:09][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2024-01-19 11:48:09][plugin_manager.py:41] - Plugin linkai_v0.1.0 registered, path=./plugins/linkai
+[INFO][2024-01-19 11:48:09][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2024-01-19 11:48:09][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2024-01-19 11:48:09][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2024-01-19 11:48:09][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2024-01-19 11:48:09][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2024-01-19 11:48:09][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2024-01-19 11:48:09][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2024-01-19 11:48:09][godcmd.py:194] - [Godcmd] 因未设置口令，本次的临时口令为9075。
+[INFO][2024-01-19 11:48:09][godcmd.py:209] - [Godcmd] inited
+[INFO][2024-01-19 11:48:09][keyword.py:40] - [keyword] {}
+[INFO][2024-01-19 11:48:09][keyword.py:42] - [keyword] inited.
+[INFO][2024-01-19 11:48:09][linkai.py:34] - [LinkAI] inited
+[INFO][2024-01-19 11:48:09][role.py:69] - [Role] inited
+[INFO][2024-01-19 11:48:09][dungeon.py:56] - [Dungeon] inited
+[INFO][2024-01-19 11:48:09][hello.py:23] - [Hello] inited
+[INFO][2024-01-19 11:48:09][finish.py:23] - [Finish] inited
+[INFO][2024-01-19 11:52:46][app.py:17] - signal 2 received, exiting...
+[INFO][2024-01-19 11:52:46][config.py:181] - [Config] User datas saved.
+[INFO][2024-01-19 11:52:46][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'wechatcom_corp_id': 'ww084ddb762e0dfc9b', 'wechatcomapp_token': '3BUTPKq1vpFD4eRR7nF88sQw', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ', 'wechatcomapp_agent_id': '1000007', 'wechatcomapp_aes_key': 'wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH'}
+[INFO][2024-01-19 11:52:46][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-19 11:52:47][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[INFO][2024-01-19 11:52:47][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: ww084ddb762e0dfc9b, secret: KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ, agent_id: 1000007, token: 3BUTPKq1vpFD4eRR7nF88sQw, aes_key: wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH
+[INFO][2024-01-19 11:52:47][plugin_manager.py:50] - Loading plugins config...
+[INFO][2024-01-19 11:52:47][plugin_manager.py:88] - Scaning plugins ...
+[WARNING][2024-01-19 11:52:47][plugin_manager.py:113] - Failed to import plugin tool: No module named 'chatgpt_tool_hub'
+[INFO][2024-01-19 11:52:47][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2024-01-19 11:52:47][plugin_manager.py:41] - Plugin linkai_v0.1.0 registered, path=./plugins/linkai
+[INFO][2024-01-19 11:52:47][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2024-01-19 11:52:47][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2024-01-19 11:52:47][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2024-01-19 11:52:47][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2024-01-19 11:52:47][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2024-01-19 11:52:47][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2024-01-19 11:52:47][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2024-01-19 11:52:47][godcmd.py:194] - [Godcmd] 因未设置口令，本次的临时口令为7923。
+[INFO][2024-01-19 11:52:47][godcmd.py:209] - [Godcmd] inited
+[INFO][2024-01-19 11:52:47][keyword.py:40] - [keyword] {}
+[INFO][2024-01-19 11:52:47][keyword.py:42] - [keyword] inited.
+[INFO][2024-01-19 11:52:47][linkai.py:34] - [LinkAI] inited
+[INFO][2024-01-19 11:52:47][role.py:69] - [Role] inited
+[INFO][2024-01-19 11:52:47][dungeon.py:56] - [Dungeon] inited
+[INFO][2024-01-19 11:52:47][hello.py:23] - [Hello] inited
+[INFO][2024-01-19 11:52:47][finish.py:23] - [Finish] inited
+[INFO][2024-01-19 11:53:23][app.py:17] - signal 2 received, exiting...
+[INFO][2024-01-19 11:53:23][config.py:181] - [Config] User datas saved.
+[INFO][2024-01-19 11:53:24][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'wechatcom_corp_id': 'ww084ddb762e0dfc9b', 'wechatcomapp_token': '3BUTPKq1vpFD4eRR7nF88sQw', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ', 'wechatcomapp_agent_id': '1000007', 'wechatcomapp_aes_key': 'wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH'}
+[INFO][2024-01-19 11:53:24][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-19 11:53:24][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[INFO][2024-01-19 11:53:24][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: ww084ddb762e0dfc9b, secret: KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ, agent_id: 1000007, token: 3BUTPKq1vpFD4eRR7nF88sQw, aes_key: wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH
+[INFO][2024-01-19 11:53:24][plugin_manager.py:50] - Loading plugins config...
+[INFO][2024-01-19 11:53:24][plugin_manager.py:88] - Scaning plugins ...
+[WARNING][2024-01-19 11:53:24][plugin_manager.py:113] - Failed to import plugin tool: No module named 'chatgpt_tool_hub'
+[INFO][2024-01-19 11:53:24][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2024-01-19 11:53:24][plugin_manager.py:41] - Plugin linkai_v0.1.0 registered, path=./plugins/linkai
+[INFO][2024-01-19 11:53:24][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2024-01-19 11:53:24][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2024-01-19 11:53:24][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2024-01-19 11:53:24][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2024-01-19 11:53:24][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2024-01-19 11:53:24][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2024-01-19 11:53:24][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2024-01-19 11:53:24][godcmd.py:194] - [Godcmd] 因未设置口令，本次的临时口令为7043。
+[INFO][2024-01-19 11:53:24][godcmd.py:209] - [Godcmd] inited
+[INFO][2024-01-19 11:53:24][keyword.py:40] - [keyword] {}
+[INFO][2024-01-19 11:53:24][keyword.py:42] - [keyword] inited.
+[INFO][2024-01-19 11:53:24][linkai.py:34] - [LinkAI] inited
+[INFO][2024-01-19 11:53:24][role.py:69] - [Role] inited
+[INFO][2024-01-19 11:53:24][dungeon.py:56] - [Dungeon] inited
+[INFO][2024-01-19 11:53:24][hello.py:23] - [Hello] inited
+[INFO][2024-01-19 11:53:24][finish.py:23] - [Finish] inited
+[INFO][2024-01-19 11:53:41][app.py:17] - signal 2 received, exiting...
+[INFO][2024-01-19 11:53:41][config.py:181] - [Config] User datas saved.
+[INFO][2024-01-19 13:46:12][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wxxxxxxxx', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'wechatcom_corp_id': 'ww084ddb762e0dfc9b', 'wechatcomapp_token': '3BUTPKq1vpFD4eRR7nF88sQw', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ', 'wechatcomapp_agent_id': '1000007', 'wechatcomapp_aes_key': 'wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH'}
+[INFO][2024-01-19 13:46:12][config.py:170] - [Config] User datas loaded.
+[ERROR][2024-01-19 13:46:12][app.py:52] - App startup failed!
+[ERROR][2024-01-19 13:46:12][app.py:53] - 
 Traceback (most recent call last):
-  File "/Users/alserial/Documents/study/aiBot/app.py", line 45, in run
+  File "app.py", line 45, in run
     channel = channel_factory.create_channel(channel_name)
-  File "/Users/alserial/Documents/study/aiBot/channel/channel_factory.py", line 35, in create_channel
-    return WechatComAppChannel()
-  File "/Users/alserial/Documents/study/aiBot/common/singleton.py", line 6, in get_instance
-    instances[cls] = cls(*args, **kwargs)
-  File "/Users/alserial/Documents/study/aiBot/channel/wechatcom/wechatcomapp_channel.py", line 42, in __init__
-    self.crypto = WeChatCrypto(self.token, self.aes_key, self.corp_id)
-  File "/Users/alserial/anaconda3/envs/aiBot/lib/python3.8/site-packages/wechatpy/enterprise/crypto.py", line 19, in __init__
-    super(WeChatCrypto, self).__init__(token, encoding_aes_key, corp_id)
-  File "/Users/alserial/anaconda3/envs/aiBot/lib/python3.8/site-packages/wechatpy/crypto/__init__.py", line 45, in __init__
-    encoding_aes_key = to_binary(encoding_aes_key + '=')
-TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
-[INFO][2024-01-15 17:31:12][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wechatcom_app', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': ''}
-[INFO][2024-01-15 17:31:12][config.py:170] - [Config] User datas loaded.
-[WARNING][2024-01-15 17:31:13][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
-[INFO][2024-01-15 17:31:13][wechatcomapp_channel.py:39] - [wechatcom] init: corp_id: None, secret: None, agent_id: None, token: None, aes_key: None
-[ERROR][2024-01-15 17:31:13][app.py:52] - App startup failed!
-[ERROR][2024-01-15 17:31:13][app.py:53] - unsupported operand type(s) for +: 'NoneType' and 'str'
-Traceback (most recent call last):
-  File "/Users/alserial/Documents/study/aiBot/app.py", line 45, in run
-    channel = channel_factory.create_channel(channel_name)
-  File "/Users/alserial/Documents/study/aiBot/channel/channel_factory.py", line 35, in create_channel
-    return WechatComAppChannel()
-  File "/Users/alserial/Documents/study/aiBot/common/singleton.py", line 6, in get_instance
-    instances[cls] = cls(*args, **kwargs)
-  File "/Users/alserial/Documents/study/aiBot/channel/wechatcom/wechatcomapp_channel.py", line 42, in __init__
-    self.crypto = WeChatCrypto(self.token, self.aes_key, self.corp_id)
-  File "/Users/alserial/anaconda3/envs/aiBot/lib/python3.8/site-packages/wechatpy/enterprise/crypto.py", line 19, in __init__
-    super(WeChatCrypto, self).__init__(token, encoding_aes_key, corp_id)
-  File "/Users/alserial/anaconda3/envs/aiBot/lib/python3.8/site-packages/wechatpy/crypto/__init__.py", line 45, in __init__
-    encoding_aes_key = to_binary(encoding_aes_key + '=')
-TypeError: unsupported operand type(s) for +: 'NoneType' and 'str'
+  File "/root/chatBot/channel/channel_factory.py", line 41, in create_channel
+    raise RuntimeError
+RuntimeError
+[INFO][2024-01-19 13:46:57][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wx', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'wechatcom_corp_id': 'ww084ddb762e0dfc9b', 'wechatcomapp_token': '3BUTPKq1vpFD4eRR7nF88sQw', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ', 'wechatcomapp_agent_id': '1000007', 'wechatcomapp_aes_key': 'wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH'}
+[INFO][2024-01-19 13:46:57][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-19 13:46:57][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[INFO][2024-01-19 13:46:57][plugin_manager.py:50] - Loading plugins config...
+[INFO][2024-01-19 13:46:57][plugin_manager.py:88] - Scaning plugins ...
+[WARNING][2024-01-19 13:46:57][plugin_manager.py:113] - Failed to import plugin tool: No module named 'chatgpt_tool_hub'
+[INFO][2024-01-19 13:46:57][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2024-01-19 13:46:57][plugin_manager.py:41] - Plugin linkai_v0.1.0 registered, path=./plugins/linkai
+[INFO][2024-01-19 13:46:57][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2024-01-19 13:46:57][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2024-01-19 13:46:57][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2024-01-19 13:46:57][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2024-01-19 13:46:57][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2024-01-19 13:46:57][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2024-01-19 13:46:57][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2024-01-19 13:46:57][godcmd.py:194] - [Godcmd] 因未设置口令，本次的临时口令为6497。
+[INFO][2024-01-19 13:46:57][godcmd.py:209] - [Godcmd] inited
+[INFO][2024-01-19 13:46:57][keyword.py:40] - [keyword] {}
+[INFO][2024-01-19 13:46:57][keyword.py:42] - [keyword] inited.
+[INFO][2024-01-19 13:46:57][linkai.py:34] - [LinkAI] inited
+[INFO][2024-01-19 13:46:57][role.py:69] - [Role] inited
+[INFO][2024-01-19 13:46:57][dungeon.py:56] - [Dungeon] inited
+[INFO][2024-01-19 13:46:57][hello.py:23] - [Hello] inited
+[INFO][2024-01-19 13:46:57][finish.py:23] - [Finish] inited
+[INFO][2024-01-19 13:47:00][app.py:17] - signal 2 received, exiting...
+[INFO][2024-01-19 13:47:00][config.py:181] - [Config] User datas saved.
+[INFO][2024-01-19 14:24:20][config.py:222] - [INIT] load config: {'open_ai_api_key': '', 'model': 'aigo', 'channel_type': 'wx', 'proxy': '', 'hot_reload': False, 'single_chat_prefix': ['aigo', '@aigo'], 'single_chat_reply_prefix': '', 'group_chat_prefix': ['aigo', '@aigo'], 'group_name_white_list': ['ALL_GROUP'], 'group_chat_in_one_session': ['ChatGPT测试群'], 'image_create_prefix': ['画', '看', '找'], 'speech_recognition': False, 'group_speech_recognition': False, 'voice_reply_voice': False, 'conversation_max_tokens': 1000, 'expires_in_seconds': 3600, 'character_desc': '你是ChatGPT, 一个由OpenAI训练的大型语言模型, 你旨在回答并解决人们的任何问题，并且可以使用多种语言与人交流。', 'temperature': 0.7, 'top_p': 1, 'subscribe_msg': '感谢您的关注！\n这里是ChatGPT，可以自由对话。\n支持语音对话。\n支持图片输入。\n支持图片输出，画字开头的消息将按要求创作图片。\n支持tool、角色扮演和文字冒险等丰富的插件。\n输入{trigger_prefix}#help 查看详细指令。', 'use_linkai': False, 'linkai_api_key': '', 'linkai_app_code': '', 'wechatcom_corp_id': 'ww084ddb762e0dfc9b', 'wechatcomapp_token': '3BUTPKq1vpFD4eRR7nF88sQw', 'wechatcomapp_port': 9898, 'wechatcomapp_secret': 'KFOxEv4eEEgq8LNyQX7J5PVjUS_7QMOSocVgr0PWbwQ', 'wechatcomapp_agent_id': '1000007', 'wechatcomapp_aes_key': 'wYdMrASn7qDIRDVsl9PeeYAdkOeCegjyilAlL4Bm7VH'}
+[INFO][2024-01-19 14:24:20][config.py:170] - [Config] User datas loaded.
+[WARNING][2024-01-19 14:24:20][audio_convert.py:9] - import pysilk failed, wechaty voice message will not be supported.
+[INFO][2024-01-19 14:24:20][plugin_manager.py:50] - Loading plugins config...
+[INFO][2024-01-19 14:24:20][plugin_manager.py:88] - Scaning plugins ...
+[INFO][2024-01-19 14:24:21][plugin_manager.py:41] - Plugin tool_v0.4 registered, path=./plugins/tool
+[INFO][2024-01-19 14:24:21][plugin_manager.py:41] - Plugin Role_v1.0 registered, path=./plugins/role
+[INFO][2024-01-19 14:24:21][plugin_manager.py:41] - Plugin linkai_v0.1.0 registered, path=./plugins/linkai
+[INFO][2024-01-19 14:24:21][plugin_manager.py:41] - Plugin Keyword_v0.1 registered, path=./plugins/keyword
+[INFO][2024-01-19 14:24:21][plugin_manager.py:41] - Plugin Hello_v0.1 registered, path=./plugins/hello
+[INFO][2024-01-19 14:24:21][plugin_manager.py:41] - Plugin Godcmd_v1.0 registered, path=./plugins/godcmd
+[INFO][2024-01-19 14:24:21][plugin_manager.py:41] - Plugin Finish_v1.0 registered, path=./plugins/finish
+[INFO][2024-01-19 14:24:21][plugin_manager.py:41] - Plugin Dungeon_v1.0 registered, path=./plugins/dungeon
+[INFO][2024-01-19 14:24:21][plugin_manager.py:41] - Plugin BDunit_v0.1 registered, path=./plugins/bdunit
+[INFO][2024-01-19 14:24:21][plugin_manager.py:41] - Plugin Banwords_v1.0 registered, path=./plugins/banwords
+[INFO][2024-01-19 14:24:21][plugin_manager.py:123] - Plugin TOOL not found in pconfig, adding to pconfig...
+[INFO][2024-01-19 14:24:21][godcmd.py:194] - [Godcmd] 因未设置口令，本次的临时口令为0936。
+[INFO][2024-01-19 14:24:21][godcmd.py:209] - [Godcmd] inited
+[INFO][2024-01-19 14:24:21][keyword.py:40] - [keyword] {}
+[INFO][2024-01-19 14:24:21][keyword.py:42] - [keyword] inited.
+[INFO][2024-01-19 14:24:21][linkai.py:34] - [LinkAI] inited
+[WARNING][2024-01-19 14:24:21][plugin_manager.py:148] - Failed to init TOOL, diabled. Did not find llm_api_key, please add an environment variable `LLM_API_KEY` which contains it, or pass  `llm_api_key` as a named parameter.
+[INFO][2024-01-19 14:24:21][role.py:69] - [Role] inited
+[INFO][2024-01-19 14:24:21][dungeon.py:56] - [Dungeon] inited
+[INFO][2024-01-19 14:24:21][hello.py:23] - [Hello] inited
+[INFO][2024-01-19 14:24:21][finish.py:23] - [Finish] inited
+[INFO][2024-01-19 14:24:52][app.py:17] - signal 2 received, exiting...
+[INFO][2024-01-19 14:24:52][config.py:181] - [Config] User datas saved.
